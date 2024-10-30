@@ -1,0 +1,16 @@
+# Mengaktifkan mod_rewrite
+RewriteEngine On
+
+# Mengarahkan semua permintaan ke index.php jika file tidak ditemukan
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# Mencegah akses ke file sensitif
+<FilesMatch "\.(env|ini|log|sql|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Mengatur tampilan 404
+ErrorDocument 404 /404.php
