@@ -1,0 +1,13 @@
+C:\xampp\htdocs\
+└── ppdb\
+    ├── .htaccess
+    ├── index.php
+    ├── submit.php
+    ├── 404.php
+    ├── assets\
+    │   ├── css\
+    │   │   └── styles.css
+    │   └── js\
+    │       └── script.js
+    └── includes\
+        └── db.php
